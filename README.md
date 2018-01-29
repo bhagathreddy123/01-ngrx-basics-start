@@ -35,3 +35,7 @@ ng serve
 handling side effects mainly asynchronus tasks
 
  npm install --save @ngrx/effects
+
+
+the below package is used for router state changes
+$ npm install --save @ngrx/router-store

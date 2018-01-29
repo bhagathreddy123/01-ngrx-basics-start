@@ -11,6 +11,8 @@ import { AuthModule } from './auth/auth.module'
 import { CoreModule } from './core/core.module';
 import { reducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+
 import { AuthEffects } from './auth/store/auth.effects';
 
 @NgModule({
@@ -26,7 +28,8 @@ import { AuthEffects } from './auth/store/auth.effects';
     AuthModule,
     CoreModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot( [AuthEffects])
+    EffectsModule.forRoot( [AuthEffects]),
+    StoreRouterConnectingModule
   ],
   bootstrap: [AppComponent]
 })
