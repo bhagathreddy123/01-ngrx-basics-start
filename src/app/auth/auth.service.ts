@@ -17,6 +17,12 @@ export class AuthService {
       .then(
         user => {
           this.store.dispatch(new AuthActions.Signup());
+          firebase.auth().currentUser.getToken()
+          .then(
+            (token: string) => {
+              this.store.dispatch(new AuthActions.SetToken(token));
+            }
+          )
         }
       )
       .catch(
