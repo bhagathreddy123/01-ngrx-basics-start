@@ -12,6 +12,8 @@ import { CoreModule } from './core/core.module';
 import { reducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 import { AuthEffects } from './auth/store/auth.effects';
 
@@ -29,7 +31,10 @@ import { AuthEffects } from './auth/store/auth.effects';
     CoreModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot( [AuthEffects]),
-    StoreRouterConnectingModule
+    StoreRouterConnectingModule,
+    StoreDevtoolsModule,
+    !environment.production ? StoreDevtoolsModule.instrument() : []
+
   ],
   bootstrap: [AppComponent]
 })

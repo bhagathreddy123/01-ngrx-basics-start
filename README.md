@@ -39,3 +39,14 @@ handling side effects mainly asynchronus tasks
 
 the below package is used for router state changes
 $ npm install --save @ngrx/router-store
+
+
+$ npm install --save @ngrx/store-devtools
+
+
+inside google addressbar search redux devtools chrome
+
+
+we can fetch it from chrome web store 
+we need to add to chrome browser.
+then need to restart the browser.

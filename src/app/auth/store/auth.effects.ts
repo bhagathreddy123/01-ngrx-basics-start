@@ -44,7 +44,7 @@ export class AuthEffects {
 			return action.payload;
 		})
 		.switchMap((authData: {username: string, password: string}) => {
-			return fromPromise(firebase.auth().createUserWithEmailAndPassword(authData.username,
+			return fromPromise(firebase.auth().signInWithEmailAndPassword(authData.username,
 			authData.password));
 		})
 		.switchMap(() => {
