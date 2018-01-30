@@ -50,3 +50,20 @@ inside google addressbar search redux devtools chrome
 we can fetch it from chrome web store 
 we need to add to chrome browser.
 then need to restart the browser.
+
+
+
+
+for final appliaction here after using below command
+
+ng build --prod --aot
+
+
+NgRx Resources:
+--------------- 
+
+Official Github Repo with Documentation: https://github.com/ngrx/platform
+
+Angular & NgRx Tutorial: https://blog.nrwl.io/using-ngrx-4-to-manage-state-in-angular-applications-64e7a1f84b7b
+
+NgRx Patterns & Techniques: https://blog.nrwl.io/ngrx-patterns-and-techniques-f46126e2b1e5
